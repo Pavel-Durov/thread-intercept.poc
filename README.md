@@ -1,10 +1,9 @@
 # Experimentation with interception of pthread_create POSIX funciton
 
+Related to: https://github.com/ykjit/yk/issues/794
+
 [LD_PRELOAD env variable](./ld-preload/README.md)
 
 [ld wrap symbol interception](./ld-wrap/README.md)
 
-Ivestigate: https://github.com/ivmai/bdwgc/blob/master/include/gc/gc_pthread_redirects.h
-
-Related to: https://github.com/ykjit/yk/issues/794
-
+[pthread_create redirect](./pthread_redirect/README.md)

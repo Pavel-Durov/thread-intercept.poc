@@ -7,4 +7,13 @@ Using `--wrap=pthread_create`, `pthread_create` calls will be resolved to `__wra
 ## Run
 ```shell
 $ make run
+mkdir -p ./dist
+
+clang++ -c -o ./dist/pthread_intercept.o pthread_intercept.cpp
+clang++ -o ./dist/my_program main.cpp ./dist/pthread_intercept.o -Wl,--wrap=pthread_create
+./dist/my_program
+
+Intercepted pthread_create!
+Running code after calling the real pthread_create...
+thread_function is running.
 ```

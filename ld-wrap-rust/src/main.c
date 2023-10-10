@@ -5,6 +5,7 @@
 void *thread_function(void *arg)
 {
     printf("\nthread_function is running.\n");
+    return NULL;
 }
 
 int main()
